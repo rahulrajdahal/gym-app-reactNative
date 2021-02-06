@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, SafeAreaView } from "react-native";
 import { COLORS, FONTS, SIZES } from "../constants";
 import { Gift, Flag } from "../constants/icons";
-import { Profile } from "../constants/images";
+import { Illu, Profile } from "../constants/images";
 
 const Home = () => {
   function renderWelcomeHeader() {
@@ -245,6 +245,227 @@ const Home = () => {
     );
   }
 
+  function renderStreak() {
+    return (
+      <View
+        style={{
+          marginTop: 327,
+          marginBottom: 21,
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginRight: 52,
+          marginLeft: 13,
+        }}
+      >
+        <Illu />
+        <View
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            // alignItems: "center",
+          }}
+        >
+          <View
+            style={{
+              backgroundColor: COLORS.primary,
+              width: 89,
+              height: 109,
+              borderRadius: 9.5,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "space-between",
+              paddingTop: 24,
+              paddingBottom: 20,
+              paddingLeft: 13,
+              paddingRight: 10,
+              marginLeft: 40,
+              marginRight: 83,
+            }}
+          >
+            <Text
+              style={{
+                color: COLORS.white,
+                ...FONTS.largeTitle,
+                lineHeight: 48,
+                fontWeight: "100",
+                textAlign: "center",
+              }}
+            >
+              10
+            </Text>
+            <Text
+              style={{
+                color: COLORS.white,
+                ...FONTS.body2,
+                fontWeight: "500",
+                textAlign: "center",
+              }}
+            >
+              Days Streak
+            </Text>
+          </View>
+
+          <View
+            style={{
+              marginTop: 13,
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "space-between",
+              width: 152,
+              height: 36,
+              marginBottom: 21,
+            }}
+          >
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <Text>M</Text>
+              <View
+                style={{
+                  width: 12,
+                  height: 12,
+                  borderRadius: 30,
+                  backgroundColor: COLORS.primary,
+                }}
+              />
+            </View>
+
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <Text>T</Text>
+              <View
+                style={{
+                  width: 12,
+                  height: 12,
+                  borderRadius: 30,
+                  backgroundColor: COLORS.primary,
+                }}
+              />
+            </View>
+
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <Text>W</Text>
+              <View
+                style={{
+                  width: 12,
+                  height: 12,
+                  borderRadius: 30,
+                  backgroundColor: COLORS.primary,
+                }}
+              />
+            </View>
+
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <Text>T</Text>
+              <View
+                style={{
+                  width: 12,
+                  height: 12,
+                  borderRadius: 30,
+                  borderWidth: 1,
+                  borderColor: COLORS.primary,
+                  borderStyle: "dashed",
+                }}
+              />
+            </View>
+
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <Text>F</Text>
+              <View
+                style={{
+                  width: 12,
+                  height: 12,
+                  borderRadius: 30,
+                  borderWidth: 1,
+                  borderColor: COLORS.primary,
+                  borderStyle: "dashed",
+                }}
+              />
+            </View>
+
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <Text>S</Text>
+              <View
+                style={{
+                  width: 12,
+                  height: 12,
+                  borderRadius: 30,
+                  borderWidth: 1,
+                  borderColor: COLORS.primary,
+                  borderStyle: "dashed",
+                }}
+              />
+            </View>
+
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <Text>S</Text>
+              <View
+                style={{
+                  width: 12,
+                  height: 12,
+                  borderRadius: 30,
+                  borderWidth: 1,
+                  borderColor: COLORS.primary,
+                  borderStyle: "dashed",
+                }}
+              />
+            </View>
+          </View>
+        </View>
+      </View>
+    );
+  }
+
   return (
     <SafeAreaView>
       <View style={{ flex: 1, backgroundColor: COLORS.white }}>
@@ -256,6 +477,9 @@ const Home = () => {
 
         {/* Activity  */}
         {renderActivity()}
+
+        {/* Illustration And Streak */}
+        {renderStreak()}
       </View>
     </SafeAreaView>
   );
