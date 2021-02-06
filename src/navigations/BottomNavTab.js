@@ -13,7 +13,7 @@ const BottomNavTab = () => {
     showLable: false,
     style: {
       elevation: 0,
-      marginBottom: 54,
+      bottom: 54,
       width: 335,
       height: 63,
       backgroundColor: COLORS.lightGreen,
