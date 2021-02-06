@@ -11,19 +11,28 @@ const Tab = createBottomTabNavigator();
 const BottomNavTab = () => {
   const tabBarOptions = {
     showLable: false,
-    style: { height: SIZES.height * 0.63, backgroundColor: "#D3ECEB" },
+    style: {
+      elevation: 0,
+      marginBottom: 54,
+      width: 335,
+      height: 63,
+      backgroundColor: COLORS.lightGreen,
+      borderRadius: 31.5,
+      marginHorizontal: 20,
+      alignSelf: "center",
+    },
   };
 
   return (
     <Tab.Navigator tabBarOptions={tabBarOptions}>
       <Tab.Screen
-        name="Home"
+        name="Dumbbell"
         component={Home}
         options={{
           tabBarLabel: "",
-          tabBarIcon: (focused) => (
+          tabBarIcon: ({ focused }) => (
             <Dumbbell
-              style={{ color: COLORS.primary, opacity: focused ? 1 : 0.2 }}
+              style={{ color: COLORS.primary, opacity: focused ? 1 : 0.5 }}
             />
           ),
         }}
@@ -34,22 +43,22 @@ const BottomNavTab = () => {
         component={Home}
         options={{
           tabBarLabel: "",
-          tabBarIcon: (focused) => (
+          tabBarIcon: ({ focused }) => (
             <HomeIcon
-              style={{ color: COLORS.primary, opacity: focused ? 1 : 0.2 }}
+              style={{ color: COLORS.primary, opacity: focused ? 1 : 0.5 }}
             />
           ),
         }}
       />
 
       <Tab.Screen
-        name="Home"
+        name="User"
         component={Home}
         options={{
           tabBarLabel: "",
-          tabBarIcon: (focused) => (
+          tabBarIcon: ({ focused }) => (
             <UserCircle
-              style={{ color: COLORS.primary, opacity: focused ? 1 : 0.2 }}
+              style={{ color: COLORS.primary, opacity: focused ? 1 : 0.5 }}
             />
           ),
         }}

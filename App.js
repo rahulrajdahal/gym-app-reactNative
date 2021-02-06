@@ -1,21 +1,30 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Home } from "./src/screens";
+import { BottomNavTab } from "./src/navigations";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Home />
-    </View>
-  );
-}
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+const theme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    border: "transparent",
   },
-});
+};
+
+const Stack = createStackNavigator();
+
+const App = () => {
+  return (
+    <NavigationContainer theme={theme}>
+      <Stack.Navigator
+        screenOptions={{ headerShown: false }}
+        initialRouteName={"BottomNavTab"}
+      >
+        <Stack.Screen name="BottomNavTab" component={BottomNavTab} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default App;

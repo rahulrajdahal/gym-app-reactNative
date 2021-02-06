@@ -4,4 +4,4 @@ import Gift from "../../assets/icons/gift.svg";
 import HomeIcon from "../../assets/icons/home.svg";
 import UserCircle from "../../assets/icons/user-circle.svg";
 
-export default { Dumbbell, Flag, Gift, HomeIcon, UserCircle };
+export { Dumbbell, Flag, Gift, HomeIcon, UserCircle };

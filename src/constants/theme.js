@@ -6,6 +6,7 @@ export const COLORS = {
   secondary: "#F8F8F8",
 
   white: "#FFFFFF",
+  lightGreen: "#D3ECEB",
 };
 
 export const SIZES = {
