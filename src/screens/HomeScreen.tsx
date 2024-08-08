@@ -8,7 +8,6 @@ import {
   View,
 } from 'react-native';
 import * as Progress from 'react-native-progress';
-import {colors} from '../../assets/colors';
 import {
   CircleFilledIcon,
   CircleIcon,
@@ -16,7 +15,8 @@ import {
   GiftIcon,
 } from '../../assets/icons';
 import {GymBoyIllustration} from '../../assets/illustrations';
-import sizes from '../../assets/sizes';
+import {colors} from '../../assets/themes/colors';
+import sizes from '../../assets/themes/sizes';
 
 const scores = [
   {id: 1, title: 'Average', score: 8.0},

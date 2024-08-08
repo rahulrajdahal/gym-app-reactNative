@@ -2,7 +2,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {DumbellIcon, HomeIcon, ProfileIcon} from '../../assets/icons';
-import sizes from '../../assets/sizes';
+import sizes from '../../assets/themes/sizes';
 import {HomeScreen, ProfileScreen, WorkoutScreen} from '../screens';
 
 const Tab = createBottomTabNavigator();
