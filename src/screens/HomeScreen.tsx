@@ -9,7 +9,13 @@ import {
 } from 'react-native';
 import * as Progress from 'react-native-progress';
 import {colors} from '../../assets/colors';
-import {FlagIcon, GiftIcon} from '../../assets/icons';
+import {
+  CircleFilledIcon,
+  CircleIcon,
+  FlagIcon,
+  GiftIcon,
+} from '../../assets/icons';
+import {GymBoyIllustration} from '../../assets/illustrations';
 import sizes from '../../assets/sizes';
 
 const scores = [
@@ -114,13 +120,20 @@ const HomeScreen = () => {
                   flexDirection: 'column',
                   alignItems: 'center',
                   gap: sizes.appHeight(1.19),
+                  shadowColor: '#F0EBEB',
+                  shadowRadius: sizes.appWidth(7.5),
+                  shadowOffset: {
+                    height: sizes.appHeight(6.625),
+                    width: sizes.appWidth(22.1825),
+                  },
+                  elevation: sizes.appHeight(5),
                 }}>
                 <Text
                   style={{
                     color: '#262626',
                     fontSize: sizes.appWidth(0.875),
                     fontWeight: '300',
-                    lineHeight: sizes.appHeight(1.125),
+                    lineHeight: sizes.appWidth(1.125),
                   }}>
                   {title}
                 </Text>
@@ -130,11 +143,72 @@ const HomeScreen = () => {
                     fontSize: sizes.appWidth(2.5),
                     fontWeight: '700',
                     marginTop: -sizes.appHeight(1.125),
+                    // lineHeight: sizes.appWidth(1.125),
                   }}>
                   {score}
                 </Text>
               </View>
             ))}
+          </View>
+        </View>
+
+        <View
+          style={{
+            marginTop: sizes.appHeight(2.19),
+            gap: sizes.appWidth(0.5),
+            alignItems: 'center',
+            flexDirection: 'row',
+          }}>
+          <GymBoyIllustration />
+
+          <View style={{gap: sizes.appHeight(0.81), alignItems: 'center'}}>
+            <View
+              style={{
+                backgroundColor: '#24A19C',
+                paddingVertical: sizes.appHeight(1.25),
+                paddingHorizontal: sizes.appWidth(0.63),
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: sizes.appWidth(0.59375),
+              }}>
+              <Text
+                style={{
+                  color: colors.white,
+                  fontSize: sizes.appWidth(3),
+                  lineHeight: sizes.appWidth(3),
+                  textAlign: 'center',
+                  fontWeight: '100',
+                }}>
+                10
+              </Text>
+              <Text
+                style={{
+                  color: colors.white,
+                  fontSize: sizes.appWidth(0.75),
+                  lineHeight: sizes.appHeight(1.25),
+                  fontWeight: '500',
+                }}>
+                Days Streak
+              </Text>
+            </View>
+
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                gap: sizes.appWidth(0.75),
+              }}>
+              {['M', 'T', 'W', 'Th', 'F', 'S', 'Su'].map(day => (
+                <View key={day} style={{gap: sizes.appHeight(0.37)}}>
+                  <Text>{day}</Text>
+                  {day === 'M' || day === 'T' || day === 'W' ? (
+                    <CircleFilledIcon />
+                  ) : (
+                    <CircleIcon />
+                  )}
+                </View>
+              ))}
+            </View>
           </View>
         </View>
       </ScrollView>
