@@ -56,6 +56,8 @@ Inside of project [GymApp](https://github.com/rahulrajdahal/gym-app-reactNative)
 │   ├── themes/
 │   │   └── colors.ts
 │   │   └── sizes.ts
+├── screenshots/
+|   └── screenshot.png
 ├── src/
 |   ├── components/
 │   │   └── Component.tsx
