@@ -7,7 +7,7 @@ const frameHeight = 50.75;
 const appWidth = (input: number) => width * (input / frameWidth);
 const appHeight = (input: number) => height * (input / frameHeight);
 
-export default {
+export const sizes = {
   width,
   fontScale,
   height,
